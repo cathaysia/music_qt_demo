@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>335</width>
+    <height>453</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+background-color: rgb(255, 255, 255);
+selection-background-color:rgb(230, 0, 0);
+}</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="5" column="0" colspan="2">
+       <widget class="QLabel" name="lbl_Time">
+        <property name="text">
+         <string>时长</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1" colspan="2">
+       <widget class="QPushButton" name="btn_Next">
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+border:1px solid rgb(255, 85, 0);
+border-radius:10px;
+height:20;
+}</string>
+        </property>
+        <property name="text">
+         <string>下一首</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" colspan="2">
+       <widget class="QPushButton" name="btn_Former">
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+border:1px solid rgb(255, 0, 0);
+border-radius:10px;
+height:20;
+}</string>
+        </property>
+        <property name="text">
+         <string>上一首</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" colspan="2">
+       <widget class="QLineEdit" name="ledit_Search">
+        <property name="contextMenuPolicy">
+         <enum>Qt::CustomContextMenu</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit{
+border:1px solid rgb(255, 0, 0);
+border-width:1px;
+border-radius: 5px;
+}</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="3">
+       <widget class="QListWidget" name="lstWgt_List">
+        <property name="contextMenuPolicy">
+         <enum>Qt::CustomContextMenu</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QListWidget{
+border:1px solid rgb(255, 0, 0);
+border-radius: 5px;
+}</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" rowspan="2">
+       <widget class="QPushButton" name="btn_Player">
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;播放音乐&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+border: 1px solid rgb(255, 0, 0);
+border-radius: 20px;
+width:40px;
+height:40px;
+border-image: url(:/image/start.png);
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QSlider" name="hs_rate">
+        <property name="styleSheet">
+         <string notr="true">
+QSlider{border:none; background-color:transparent;border-radius: 8px; }    
+QSlider::handle:horizontal {   
+               background: transparent;
+               border: none;
+               width: 12px;
+               height: 6px; 
+               border-radius: 8px;
+                }    
+QSlider::groove:horizontal{
+                 background-color:#ffffff;   
+                 border-radius: 8px; 
+                }               
+QSlider::add-page:horizontal {
+                border-radius :3px;
+                background: #ffffff;
+                }           
+QSlider::sub-page:horizontal {
+                border-radius :3px;
+                background-color:rgb(255, 0, 0);
+                }
+border-radius:20px;
+height:40;</string>
+        </property>
+        <property name="maximum">
+         <number>999</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="tickPosition">
+         <enum>QSlider::NoTicks</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0" colspan="2">
+       <widget class="QLabel" name="lab_State">
+        <property name="text">
+         <string>未播放歌曲</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="lbl_Search">
+        <property name="styleSheet">
+         <string notr="true">QLabel{
+width:20px;
+}</string>
+        </property>
+        <property name="text">
+         <string>搜索</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QPushButton" name="pushButton">
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+border:1px solid rgb(255, 0, 0);
+border-radius: 20px;
+width:40px;
+height:40px;
+}</string>
+        </property>
+        <property name="text">
+         <string>暂停</string>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="2">
+       <widget class="QPushButton" name="btn_volume">
+        <property name="text">
+         <string>音量</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>335</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionMusic"/>
+    <addaction name="actionDir"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>控制</string>
+    </property>
+    <addaction name="action_Save"/>
+    <addaction name="actionExit"/>
+    <addaction name="actionLoadList"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="action">
+   <property name="text">
+    <string>文件</string>
+   </property>
+   <property name="toolTip">
+    <string>打开文件</string>
+   </property>
+  </action>
+  <action name="actionMusic">
+   <property name="text">
+    <string>添加文件</string>
+   </property>
+   <property name="toolTip">
+    <string>添加音乐</string>
+   </property>
+  </action>
+  <action name="actionDir">
+   <property name="text">
+    <string>添加文件夹</string>
+   </property>
+   <property name="toolTip">
+    <string>添加文件夹</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+  <action name="action_Save">
+   <property name="text">
+    <string>保存音乐列表</string>
+   </property>
+  </action>
+  <action name="actionLoadList">
+   <property name="text">
+    <string>记载音乐列表</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>ledit_Search</tabstop>
+  <tabstop>btn_Player</tabstop>
+  <tabstop>btn_Former</tabstop>
+  <tabstop>btn_Next</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
